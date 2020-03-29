@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article>
+	<div>
+		<p>Below you will find pages that utilize the taxonomy term “{{ .Title }}”</p>
+	</div>
+</article>
+<div>
+	<section>
+		{{ range .Pages }}
+		<div>
+			{{ partial "summary.html" . }}
+		</div>
+		{{ end }}
+	</section>
+</div>
+{{ end }}

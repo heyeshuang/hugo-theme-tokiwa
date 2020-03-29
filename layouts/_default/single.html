@@ -1,0 +1,40 @@
+{{ define "header" }}
+{{/* We can override any block in the baseof file be defining it in the template */}}
+{{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+{{ $section := .Site.GetPage "section" .Section }}
+<article>
+
+	<header>
+		<p>
+			{{/*
+			CurrentSection allows us to use the section title instead of inferring from the folder.
+			https://gohugo.io/variables/page/#section-variables-and-methods
+			*/}}
+			{{with .CurrentSection.Title }}{{. | upper }}{{end}}
+		</p>
+		<h1>
+			{{- .Title -}}
+		</h1>
+		{{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+		<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+			{{- .Date.Format "January 2, 2006" -}}
+		</time>
+	</header>
+
+	<section>
+		{{- .Content -}}
+		{{- partial "tags.html" . -}}
+		<div>
+			{{ template "_internal/disqus.html" . }}
+		</div>
+	</section>
+
+	<aside>
+		{{- partial "menu-contextual.html" . -}}
+	</aside>
+
+</article>
+{{ end }}
