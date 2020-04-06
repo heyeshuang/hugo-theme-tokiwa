@@ -1,8 +1,105 @@
+@charset "UTF-8";
 // @import "normalize";
 /* purgecss start ignore */
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
+
+.heading {
+    @apply font-bold leading-tight;
+}
+
+h1 {
+    @apply heading text-5xl;
+    @screen sm {
+        @apply text-6xl;
+    }
+}
+h2 {
+    @apply heading text-4xl;
+    @screen sm {
+        @apply text-5xl;
+    }
+}
+h3 {
+    @apply heading text-4xl;
+}
+h4 {
+    @apply heading text-3xl;
+}
+h5 {
+    @apply heading text-2xl;
+}
+h6 {
+    @apply heading text-xl;
+}
+
+
+.c-rich-text {
+    font-weight: theme('fontWeight.normal');
+    font-size: theme('fontSize.base');
+    line-height: theme('lineHeight.relaxed');
+    > * + * {
+        margin-top: 1rem;
+    }
+    ul {
+        list-style-type: square;
+        list-style-position: inside
+    }
+    ol {
+        list-style-type: lower-greek;
+        list-style-position: inside
+    }
+    li > ol, li > ul {
+        margin-left: theme("spacing.2")
+    }
+    .footnotes ol {
+        list-style-type: decimal;
+        list-style-position: outside
+    }
+    mark {
+        background-color:theme("colors.java.300");
+        border-bottom-color:theme("colors.java.600");
+        border-bottom-width: 2px;
+        padding: 2px;
+        margin: 0 5px
+    }
+    table {
+        table-layout: auto
+    }
+    th,td {
+        border-bottom-color: theme("colors.java.600");
+        border-bottom-width: 1px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem
+    }
+    th {
+        border-top-width: 1px;
+        background-color:theme("colors.java.100");
+        border-top-color: theme("colors.java.600")
+    }
+    a {
+        // @apply font-bold;
+            color: theme('colors.eucalyptus.500');
+        &:hover {
+        color: theme('colors.java.500');
+            text-decoration: underline;
+        }
+    }
+    b, strong {
+        font-weight: theme('fontWeight.bold'),
+    }
+    i, em {
+        font-style: italic
+    }
+    sub, sup {
+        font-size: theme('fontSize.xs');
+        vertical-align: baseline
+    }
+}
+
 /* purgecss end ignore */
 
 @import "tailwindcss/utilities";

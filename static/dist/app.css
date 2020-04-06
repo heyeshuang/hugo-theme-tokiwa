@@ -625,62 +625,57 @@ video {
   }
 }
 
-.c-h1 {
+.heading {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 3rem;
 }
 
 @media (min-width: 640px) {
-  .c-h1 {
+  h1 {
     font-size: 4rem;
   }
 }
 
-.c-h2 {
+h2 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
 }
 
 @media (min-width: 640px) {
-  .c-h2 {
+  h2 {
     font-size: 3rem;
   }
 }
 
-.c-h3 {
+h3 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
 }
 
-.c-h4 {
+h4 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.875rem;
 }
 
-.c-h5 {
+h5 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.5rem;
 }
 
-.c-h6 {
+h6 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.25rem;
-}
-
-.c-link {
-  font-weight: 700;
-  color: #49BEB7;
-}
-
-.c-link:hover {
-  color: #2C726E;
-  text-decoration: underline;
 }
 
 .c-rich-text {
@@ -691,54 +686,6 @@ video {
 
 .c-rich-text > * + * {
   margin-top: 1rem;
-}
-
-.c-rich-text h1 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 3rem;
-}
-
-@media (min-width: 640px) {
-  .c-rich-text h1 {
-    font-size: 4rem;
-  }
-}
-
-.c-rich-text h2 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-@media (min-width: 640px) {
-  .c-rich-text h2 {
-    font-size: 3rem;
-  }
-}
-
-.c-rich-text h3 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-.c-rich-text h4 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.875rem;
-}
-
-.c-rich-text h5 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.5rem;
-}
-
-.c-rich-text h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.25rem;
 }
 
 .c-rich-text ul {
@@ -762,8 +709,8 @@ video {
 
 .c-rich-text mark {
   background-color: #B6E5E2;
-  border-bottom-width: 2px;
   border-bottom-color: #42ABA5;
+  border-bottom-width: 2px;
   padding: 2px;
   margin: 0 5px;
 }
@@ -772,9 +719,9 @@ video {
   table-layout: auto;
 }
 
-.c-rich-text th,.c-rich-text td {
-  border-bottom-width: 1px;
+.c-rich-text th, .c-rich-text td {
   border-bottom-color: #42ABA5;
+  border-bottom-width: 1px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
@@ -782,18 +729,17 @@ video {
 }
 
 .c-rich-text th {
-  background-color: #EDF9F8;
   border-top-width: 1px;
+  background-color: #EDF9F8;
   border-top-color: #42ABA5;
 }
 
 .c-rich-text a {
-  font-weight: 700;
-  color: #49BEB7;
+  color: #028760;
 }
 
 .c-rich-text a:hover {
-  color: #2C726E;
+  color: #49BEB7;
   text-decoration: underline;
 }
 
