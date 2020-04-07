@@ -626,11 +626,13 @@ video {
 }
 
 .heading {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
 }
 
 h1 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 3rem;
@@ -643,6 +645,7 @@ h1 {
 }
 
 h2 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
@@ -655,30 +658,35 @@ h2 {
 }
 
 h3 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
 }
 
 h4 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.875rem;
 }
 
 h5 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.5rem;
 }
 
 h6 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
   font-size: 1.25rem;
 }
 
 .c-rich-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.625;
@@ -754,6 +762,63 @@ h6 {
 .c-rich-text sub, .c-rich-text sup {
   font-size: 0.75rem;
   vertical-align: baseline;
+}
+
+.c-rich-text acronym, .c-rich-text abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+.c-rich-text abbr {
+  cursor: help;
+}
+
+.c-rich-text pre, .c-rich-text code, .c-rich-text pre tt {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.c-rich-text code, .c-rich-text pre tt, .c-rich-text kbd {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-width: 1px;
+  border-color: #80D2CD;
+  background: repeating-linear-gradient(45deg, #B6E5E2, #B6E5E2 1px, #EDF9F8 0, #EDF9F8 5px);
+}
+
+.c-rich-text pre code, .c-rich-text kbd kbd {
+  padding-left: 0;
+  padding-right: 0;
+  border-style: none;
+  background: none;
+}
+
+.c-rich-text pre {
+  overflow-x: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-right-radius: 0.5rem;
+  border-color: #49BEB7;
+  background-color: #EDF9F8;
+  padding: 1em 1.5em;
+  display: block;
+}
+
+.c-rich-text hr {
+  border: none;
+  border-bottom: 1px solid #49BEB7;
+  margin-bottom: 0.8em;
+  height: 10px;
+}
+
+.c-rich-text blockquote {
+  position: relative;
+  font-weight: 300;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
+  padding-left: 0.75rem;
+  border-left-width: 2px;
+  border-color: #49BEB7;
 }
 
 /* purgecss end ignore */

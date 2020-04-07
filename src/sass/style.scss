@@ -6,7 +6,7 @@
 @import "tailwindcss/components";
 
 .heading {
-    @apply font-bold leading-tight;
+    @apply font-serif font-bold leading-tight;
 }
 
 h1 {
@@ -36,9 +36,7 @@ h6 {
 
 
 .c-rich-text {
-    font-weight: theme('fontWeight.normal');
-    font-size: theme('fontSize.base');
-    line-height: theme('lineHeight.relaxed');
+    @apply font-sans font-normal text-base leading-relaxed;
     > * + * {
         margin-top: 1rem;
     }
@@ -98,6 +96,44 @@ h6 {
         font-size: theme('fontSize.xs');
         vertical-align: baseline
     }
+    acronym, abbr {
+        border-bottom: 1px dotted;
+        font-variant: normal;
+        text-decoration: none;
+      }
+    abbr {
+        cursor: help;
+      }
+      
+    pre, code, pre tt {
+        @apply font-mono;
+      }
+    code, pre tt, kbd {
+        @apply px-1 border border-java-400;
+        background: repeating-linear-gradient(45deg, theme('colors.java.300') , theme('colors.java.300') 1px, theme('colors.java.100') 0, theme('colors.java.100') 5px);
+    }
+    pre code,kbd kbd {
+        @apply px-0 border-none;
+        background: none;
+    }
+      
+    pre {
+        @apply overflow-x-auto border border-solid rounded-br-lg border-java-500 bg-java-100;
+        padding: 1em 1.5em;
+        display: block;
+      }
+      hr {
+        border: none;
+        border-bottom: 1px solid theme('colors.java.500');
+        margin-bottom: 0.8em;
+        height: 10px;
+      }
+      blockquote {
+        @apply relative font-light ml-8 mr-6 pl-3 ; 
+        @apply border-l-2 border-java-500;
+        // padding-left: 1em;
+        // margin: 1em 3em 1em 2em;
+      }
 }
 
 /* purgecss end ignore */
