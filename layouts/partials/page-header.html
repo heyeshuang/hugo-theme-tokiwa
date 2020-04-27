@@ -3,11 +3,17 @@
 		<a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}" class="heading">{{ .Site.Title }}</a>
 	</h3>
 </div>
-<h1>
+<h1 class="pt-2">
 	{{- .Title -}}
 </h1>
-{{- partial "tags.html" . -}}
-<time class="text-eucalyptus-600" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-	{{- .Date.Format "2006年1月2日" -}}
-</time>
+{{with .Description}}
+<h3 class="text-java-700 font-normal leading-relaxed pt-2">{{.}}</h3>
+{{end}}
+<div class="flex flex-wrap justify-between pt-2 ">
+	{{- partial "tags.html" . -}}
+	<time class="text-eucalyptus-600 md:text-right md:flex-grow" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+		&nbsp;{{- .Date.Format "2006年1月2日" -}}
+	</time>
+</div>
+<hr class=" pb-4" />
 {{ partial "site-navigation.html" . }}

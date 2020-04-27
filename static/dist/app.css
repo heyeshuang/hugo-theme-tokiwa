@@ -6300,8 +6300,8 @@ a:focus {
   min-height: 100vh;
 }
 
-.min-h-80vh {
-  min-height: 80vh;
+.min-h-70vh {
+  min-height: 70vh;
 }
 
 .min-w-0 {
@@ -22573,8 +22573,8 @@ a:focus {
     min-height: 100vh;
   }
 
-  .sm\:min-h-80vh {
-    min-height: 80vh;
+  .sm\:min-h-70vh {
+    min-height: 70vh;
   }
 
   .sm\:min-w-0 {
@@ -38847,8 +38847,8 @@ a:focus {
     min-height: 100vh;
   }
 
-  .md\:min-h-80vh {
-    min-height: 80vh;
+  .md\:min-h-70vh {
+    min-height: 70vh;
   }
 
   .md\:min-w-0 {
@@ -55121,8 +55121,8 @@ a:focus {
     min-height: 100vh;
   }
 
-  .lg\:min-h-80vh {
-    min-height: 80vh;
+  .lg\:min-h-70vh {
+    min-height: 70vh;
   }
 
   .lg\:min-w-0 {
@@ -71395,8 +71395,8 @@ a:focus {
     min-height: 100vh;
   }
 
-  .xl\:min-h-80vh {
-    min-height: 80vh;
+  .xl\:min-h-70vh {
+    min-height: 70vh;
   }
 
   .xl\:min-w-0 {
