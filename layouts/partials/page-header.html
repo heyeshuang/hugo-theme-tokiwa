@@ -1,5 +1,13 @@
-<header>
-	<div>
-		{{ partial "site-navigation.html" . }}
-	</div>
-</header>
+<div>
+	<h3>
+		<a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}" class="heading">{{ .Site.Title }}</a>
+	</h3>
+</div>
+<h1>
+	{{- .Title -}}
+</h1>
+{{- partial "tags.html" . -}}
+<time class="text-eucalyptus-600" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+	{{- .Date.Format "2006年1月2日" -}}
+</time>
+{{ partial "site-navigation.html" . }}

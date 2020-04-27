@@ -7,7 +7,7 @@
 	{{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
 	<title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1">
-	{{ .Hugo.Generator }}
+	{{ hugo.Generator }}
 	{{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 	<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -28,23 +28,30 @@
 	{{ partial "site-favicon.html" . }}
 	{{ end }}
 
-	{{ if .RSSLink }}
-	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-	{{ end }}
-
+	{{ with .OutputFormats.Get "RSS" }}
+    	<link rel="alternate" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
+		<link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
+	{{end}}
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
 </head>
 
-<body>
-	{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-	<main role="main">
-		{{ block "main" . }}{{ end }}
-	</main>
-	{{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-	{{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+<body class="bg-gray-100 text-gray-700">
+	<div class="p-6 sm:p-10 md:p-16 flex flex-wrap ">
+		<header class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-24 xl:pr-32 order-1 md:order-1 ">
+			<div class="max-w-xl md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 pt-2">
+				{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+			</div>
+		</header>
+		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-2xl order-2 md:order-2 pt-2">
+			{{ block "main" . }}{{ end }}
+		</main>
+		<footer role="contentinfo" class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-24 xl:pr-32 order-3 md:order-3 md:sticky md:bottom-0 ">
+			{{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+		</footer>
+		{{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+	</div>
 </body>
 
 </html>
