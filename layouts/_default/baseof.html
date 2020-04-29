@@ -38,21 +38,24 @@
 </head>
 
 <body class="bg-gray-100 text-gray-700">
-	<div class="p-6 sm:p-10 md:p-16 flex flex-wrap ">
-		<header class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-32 order-1 md:order-1 md:min-h-70vh">
+	<div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
+		<header class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-1 md:order-1 max-w-2xl md:min-h-70vh">
 			<div class="max-w-xl md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 pt-2">
 				{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
 			</div>
 		</header>
-		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-2xl order-2 md:order-2 pt-2">
+		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-3xl order-2 md:order-2 pt-2 pb-4">
 			{{ block "main" . }}{{ end }}
 		</main>
-		<footer role="contentinfo" class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-24 xl:pr-32 order-4 md:order-3 md:sticky md:bottom-0 self-end ">
+		<aside role="contentinfo" class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-4 md:order-3 md:sticky md:bottom-0 self-end max-w-2xl">
 			<div class="md:float-right md:text-right leading-loose tracking-tight md:mb-16">
-			{{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+			{{ block "aside" . }}{{ partial "site-aside.html" . }}{{ end }}
 			</div>
+		</aside>
+		<footer class="w-full md:w-3/5 xl:w-1/2 order-3 md:order-4">
+		{{ block "footer" . }}
+		{{ end }}
 		</footer>
-		<footer class="w-full md:w-3/5 xl:w-1/2 order-3 md:order-4">TODO:disqus</footer>
 		{{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
 	</div>
 </body>

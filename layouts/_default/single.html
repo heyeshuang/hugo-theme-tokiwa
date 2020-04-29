@@ -9,14 +9,15 @@
 		<div class="c-rich-text">
 			{{- .Content -}}
 		</div>
-		<div>
-			{{ template "_internal/disqus.html" . }}
-		</div>
 	</section>
 
-	<aside>
-		{{- partial "menu-contextual.html" . -}}
-	</aside>
 
 </article>
+{{ end }}
+
+{{ define "aside" }}
+	{{ partial "page-aside.html" . }}
+{{ end }}
+{{ define "footer" }}
+{{ partial "page-footer.html" . }}
 {{ end }}

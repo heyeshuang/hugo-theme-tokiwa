@@ -640,7 +640,7 @@ h1 {
   font-size: 1.875rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   h1 {
     font-size: 2.25rem;
   }
@@ -654,7 +654,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   h2 {
     font-size: 1.875rem;
   }
@@ -690,6 +690,13 @@ h6 {
   line-height: 1.25;
   color: #01513A;
   font-size: 1.125rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #9ACFBF;
+  margin-bottom: 0.8em;
+  height: 10px;
 }
 
 a {

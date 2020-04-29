@@ -1,15 +1,19 @@
-{{ if isset .Params "tags" }}
-{{ $count := len .Params.tags }}
-{{ if gt $count 0 }}
-<div>
+<div class="md:flex-grow">
+	{{ if isset .Params "categories" }}
+	{{ $count := len .Params.categories}}
+	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.categories}}
 	<a class="post-taxonomy-category text-eucalyptus-700"
 		href="/categories/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+	{{end}}&nbsp;
 	{{end}}
+	{{end}}
+	{{ if isset .Params "tags" }}
+	{{ $count := len .Params.tags }}
+	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.tags }}
-	<a class="post-taxonomy-tag"
-		href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+	<a class="post-taxonomy-tag" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+	{{ end }}
+	{{ end }}
 	{{ end }}
 </div>
-{{ end }}
-{{ end }}

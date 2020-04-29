@@ -11,9 +11,9 @@
 {{end}}
 <div class="flex flex-wrap justify-between pt-2 ">
 	{{- partial "tags.html" . -}}
-	<time class="text-eucalyptus-600 md:text-right md:flex-grow" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+	<time class="text-eucalyptus-600 md:text-right md:flex-grow"
+		datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 		&nbsp;{{- .Date.Format "2006年1月2日" -}}
 	</time>
 </div>
-<hr class=" pb-4" />
-{{ partial "site-navigation.html" . }}
+<hr />
