@@ -1,0 +1,72 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<ul class="flex justify-between">
+    {{ with $pag.First }}
+    <li class="page-item">
+        <a href="{{ .URL }}" class="page-link" aria-label="First"><span aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevrons-left h-4 w-4 relative -bottom-1">
+                    <polyline points="11 17 6 12 11 7"></polyline>
+                    <polyline points="18 17 13 12 18 7"></polyline>
+                </svg>
+            </span></a>
+    </li>
+    {{ end }}
+    <li class="page-item{{ if not $pag.HasPrev }} disabled{{ end }}">
+        <a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}" {{ end }} class="page-link" aria-label="Previous"><span
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-left h-4 w-4 relative -bottom-1">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </span></a>
+    </li>
+    <div class="flex-grow-3"></div>
+    {{ $ellipsed := false }}
+    {{ $shouldEllipse := false }}
+    {{ range $pag.Pagers }}
+    {{ $right := sub .TotalPages .PageNumber }}
+    {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
+    {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2)))  }}
+    {{ if $showNumber }}
+    {{ $ellipsed = false }}
+    {{ $shouldEllipse = false }}
+    {{ else }}
+    {{ $shouldEllipse = not $ellipsed }}
+    {{ $ellipsed = true }}
+    {{ end }}
+    {{ if $showNumber }}
+    <li class="page-item{{ if eq . $pag }} active{{ end }}"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+    </li>
+    {{ else if $shouldEllipse }}
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    {{ end }}
+    {{ end }}
+    <div class="flex-grow-3"></div>
+    <li class="page-item{{ if not $pag.HasNext }} disabled{{ end }}">
+        <a {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}" {{ end }} class="page-link" aria-label="Next"><span
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right h-4 w-4 relative -bottom-1">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </span></a>
+    </li>
+    {{ with $pag.Last }}
+    <li class="page-item">
+        <a href="{{ .URL }}" class="page-link" aria-label="Last"><span aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevrons-right h-4 w-4 relative -bottom-1">
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline>
+                </svg>
+            </span></a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+

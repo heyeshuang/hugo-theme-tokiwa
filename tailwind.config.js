@@ -17,6 +17,12 @@ module.exports = {
       minHeight:{
         '70vh':'70vh'
       },
+      inset:{
+        "-1":"-0.25rem"
+      },
+      flexGrow:{
+        "3":3
+      },
       maxHeight:{
         '16':'5rem'
       },

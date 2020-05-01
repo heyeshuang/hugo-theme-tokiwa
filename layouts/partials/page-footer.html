@@ -1,5 +1,5 @@
 <hr class="double-line" />
-<div class="flex flex-wrap justify-between pb-2 font-serif">
+<div class="flex flex-wrap justify-between pb-2 leading-loose font-serif">
     {{with .Site.RegularPages.Prev . }}
     <a class="flex-grow-0" href="{{.RelPermalink}}">
         <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
@@ -19,9 +19,23 @@
     {{end}}
 </div>
 <div >
-    {{- partial "menu-contextual.html" . -}}
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+{{ $count := len $related }}
+{{ with $related }}
+<div class="font-serif pb-2 flex align-start leading-loose">
+	<span class="heading pr-6 leading-loose">Related</span>
+	<span >
+		{{ range $k, $v := . }}
+			<a href="{{ $v.RelPermalink }}">
+				{{- $v.Title -}}
+			</a>{{ if lt $k (sub $count 1) }}&nbsp;&nbsp;&#47;&nbsp;{{end}}
+		{{ end }}
+</span>
+</div>
+{{ end }}
 </div>
 <hr />
 <div class="pb-2">
     {{ template "_internal/disqus.html" . }}
 </div>
+<hr />

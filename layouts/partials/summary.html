@@ -1,13 +1,12 @@
 <div>
 	<div>
-		<span>{{ humanize .Section }}</span>
-		<h1>
+		<div>
 			<a href="{{ .Permalink }}">
 				{{ .Title }}
 			</a>
-		</h1>
-		<div>
-			{{ .Summary }}
-		</div>
+			</div>
+		{{ with .Description }}
+			<div>{{.}}</div>
+		{{ end }}
 	</div>
 </div>

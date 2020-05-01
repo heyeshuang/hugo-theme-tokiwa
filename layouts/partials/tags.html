@@ -4,8 +4,8 @@
 	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.categories}}
 	<a class="post-taxonomy-category text-medium-red-violet-600 hover:text-medium-red-violet-400"
-		href="/categories/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
-	{{end}}&nbsp;
+		href="/categories/{{ . | urlize }}">{{ . }}</a>&nbsp;&#47;
+	{{end}}
 	{{end}}
 	{{end}}
 	{{ if isset .Params "tags" }}

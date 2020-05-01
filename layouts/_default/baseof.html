@@ -44,7 +44,7 @@
 				{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
 			</div>
 		</header>
-		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-3xl order-2 md:order-2 pt-2 pb-4">
+		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-3xl order-2 md:order-2 min-h-70vh pt-2 pb-4">
 			{{ block "main" . }}{{ end }}
 		</main>
 		<aside role="contentinfo" class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-4 md:order-3 md:sticky md:bottom-0 self-end max-w-2xl">
@@ -52,7 +52,7 @@
 			{{ block "aside" . }}{{ partial "site-aside.html" . }}{{ end }}
 			</div>
 		</aside>
-		<footer class="w-full md:w-3/5 xl:w-1/2 order-3 max-w-3xl md:order-4">
+		<footer class="w-full md:w-3/5 xl:w-1/2 order-3 max-w-3xl md:order-4 pt-2">
 		{{ block "footer" . }}
 		{{ end }}
 		</footer>

@@ -11,34 +11,43 @@
 
 h1 {
     @apply heading text-3xl;
+
     @screen lg {
         @apply text-4xl;
     }
 }
+
 h2 {
     @apply heading text-2xl;
+
     @screen lg {
         @apply text-3xl;
     }
 }
+
 h3 {
     @apply heading text-xl;
 }
+
 h4 {
     @apply heading text-lg;
 }
+
 h5 {
     @apply heading text-lg;
 }
+
 h6 {
     @apply heading text-lg;
 }
+
 hr {
-  border: none;
-  border-bottom: 1px solid theme("colors.eucalyptus.300");
-  margin-bottom: 0.8em;
-  height: 10px;
+    border: none;
+    border-bottom: 1px solid theme("colors.eucalyptus.300");
+    margin-bottom: 0.8em;
+    height: 5px;
 }
+
 hr.double-line {
     border: none;
     border-bottom: 1px solid theme('colors.java.500');
@@ -91,27 +100,34 @@ a {
     }
 
     >*+* {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
+
+    li     {
+        margin-bottom: 0.25rem;
+        p {
+        display: inline;
+    }
+}
 
     ul {
         list-style-type: square;
-        list-style-position: inside
+        list-style-position: inside;
     }
 
     ol {
         list-style-type: lower-greek;
-        list-style-position: inside
+        list-style-position: inside;
     }
 
     li>ol,
     li>ul {
-        margin-left: theme("spacing.2")
+        margin-left: theme("spacing.4")
     }
 
     .footnotes ol {
         list-style-type: decimal;
-        list-style-position: outside
+        // list-style-position: outside
     }
 
     mark {
@@ -137,65 +153,86 @@ a {
         padding-right: 1rem
     }
 
-         th {
-             border-top-width: 1px;
-             background-color: theme("colors.java.100");
-             border-top-color: theme("colors.java.600")
-         }
+    th {
+        border-top-width: 1px;
+        background-color: theme("colors.java.100");
+        border-top-color: theme("colors.java.600")
+    }
 
-         b,
-         strong {
-             font-weight: theme('fontWeight.bold');
-             color: theme('colors.eucalyptus.600')
-         }
+    b,
+    strong {
+        font-weight: theme('fontWeight.bold');
+        color: theme('colors.eucalyptus.600')
+    }
 
-         i,
-         em {
-             font-style: italic
-         }
+    i,
+    em {
+        font-style: italic
+    }
 
-         sub,
-         sup {
-             font-size: theme('fontSize.xs');
-             vertical-align: baseline
-         }
+    sub,
+    sup {
+        font-size: theme('fontSize.xs');
+        vertical-align: baseline
+    }
 
-         acronym,
-         abbr {
+    acronym,
+    abbr {
         border-bottom: 1px dotted;
         font-variant: normal;
         text-decoration: none;
-      }
+    }
+
     abbr {
         cursor: help;
-      }
-      
-    pre, code, pre tt {
-        @apply font-mono;
-      }
-    code, pre tt, kbd {
-        @apply px-1 border border-java-400;
-        background: repeating-linear-gradient(45deg, theme('colors.java.300') , theme('colors.java.300') 1px, theme('colors.java.100') 0, theme('colors.java.100') 5px);
     }
-    pre code,kbd kbd {
+
+    pre,
+    code,
+    pre tt {
+        @apply font-mono;
+    }
+
+    code,
+    pre tt,
+    kbd {
+        @apply px-1 border border-java-400;
+        background: repeating-linear-gradient(45deg, theme('colors.java.300'), theme('colors.java.300') 1px, theme('colors.java.100') 0, theme('colors.java.100') 5px);
+    }
+
+    pre code,
+    kbd kbd {
         @apply px-0 border-none;
         background: none;
     }
-      
-    pre{
+
+    pre {
         @apply scrolling-auto overflow-x-auto border border-solid rounded-br-lg border-java-500 bg-java-100;
         padding: 1em 1.5em;
         display: block;
     }
-    .highlight{
+
+    .highlight {
         @apply scrolling-auto overflow-x-auto
-    } 
+    }
+
     blockquote {
-        @apply relative font-light ml-8 mr-6 pl-3 ; 
+        @apply relative font-light ml-8 pr-6 pl-3 ;
         @apply border-l-2 border-java-500;
-        // padding-left: 1em;
+        // @apply bg-java-100;
         // margin: 1em 3em 1em 2em;
     }
+}
+
+.page-item {
+    @apply flex-grow;
+
+}
+.page-item.disabled a{
+    @apply text-gray-400;
+}
+.page-item.active a{
+    @apply text-java-400 ;
 }
 
 /* purgecss end ignore */

@@ -696,7 +696,7 @@ hr {
   border: none;
   border-bottom: 1px solid #9ACFBF;
   margin-bottom: 0.8em;
-  height: 10px;
+  height: 5px;
 }
 
 hr.double-line {
@@ -755,7 +755,15 @@ a:hover, a:focus {
 }
 
 .c-rich-text > * + * {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.c-rich-text li {
+  margin-bottom: 0.25rem;
+}
+
+.c-rich-text li p {
+  display: inline;
 }
 
 .c-rich-text ul {
@@ -770,12 +778,11 @@ a:hover, a:focus {
 
 .c-rich-text li > ol,
   .c-rich-text li > ul {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 .c-rich-text .footnotes ol {
   list-style-type: decimal;
-  list-style-position: outside;
 }
 
 .c-rich-text mark {
@@ -836,11 +843,15 @@ a:hover, a:focus {
   cursor: help;
 }
 
-.c-rich-text pre, .c-rich-text code, .c-rich-text pre tt {
+.c-rich-text pre,
+  .c-rich-text code,
+  .c-rich-text pre tt {
   font-family: 'Fira Code','Cascadia Code',Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New','Sarasa Mono SC','Noto Sans CJK SC','monospace', monospace;
 }
 
-.c-rich-text code, .c-rich-text pre tt, .c-rich-text kbd {
+.c-rich-text code,
+  .c-rich-text pre tt,
+  .c-rich-text kbd {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   border-width: 1px;
@@ -848,7 +859,8 @@ a:hover, a:focus {
   background: repeating-linear-gradient(45deg, #B6E5E2, #B6E5E2 1px, #EDF9F8 0, #EDF9F8 5px);
 }
 
-.c-rich-text pre code, .c-rich-text kbd kbd {
+.c-rich-text pre code,
+  .c-rich-text kbd kbd {
   padding-left: 0;
   padding-right: 0;
   border-style: none;
@@ -876,10 +888,22 @@ a:hover, a:focus {
   position: relative;
   font-weight: 300;
   margin-left: 2rem;
-  margin-right: 1.5rem;
+  padding-right: 1.5rem;
   padding-left: 0.75rem;
   border-left-width: 2px;
   border-color: #49BEB7;
+}
+
+.page-item {
+  flex-grow: 1;
+}
+
+.page-item.disabled a {
+  color: #cbd5e0;
+}
+
+.page-item.active a {
+  color: #80D2CD;
 }
 
 /* purgecss end ignore */
@@ -4714,6 +4738,10 @@ a:hover, a:focus {
 
 .flex-grow-0 {
   flex-grow: 0;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
 }
 
 .flex-grow {
@@ -12313,6 +12341,13 @@ a:hover, a:focus {
   left: auto;
 }
 
+.-inset-1 {
+  top: -0.25rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  left: -0.25rem;
+}
+
 .inset-y-0 {
   top: 0;
   bottom: 0;
@@ -12331,6 +12366,16 @@ a:hover, a:focus {
 .inset-x-auto {
   right: auto;
   left: auto;
+}
+
+.-inset-y-1 {
+  top: -0.25rem;
+  bottom: -0.25rem;
+}
+
+.-inset-x-1 {
+  right: -0.25rem;
+  left: -0.25rem;
 }
 
 .top-0 {
@@ -12363,6 +12408,22 @@ a:hover, a:focus {
 
 .left-auto {
   left: auto;
+}
+
+.-top-1 {
+  top: -0.25rem;
+}
+
+.-right-1 {
+  right: -0.25rem;
+}
+
+.-bottom-1 {
+  bottom: -0.25rem;
+}
+
+.-left-1 {
+  left: -0.25rem;
 }
 
 .resize-none {
@@ -20997,6 +21058,10 @@ a:hover, a:focus {
     flex-grow: 0;
   }
 
+  .sm\:flex-grow-3 {
+    flex-grow: 3;
+  }
+
   .sm\:flex-grow {
     flex-grow: 1;
   }
@@ -28594,6 +28659,13 @@ a:hover, a:focus {
     left: auto;
   }
 
+  .sm\:-inset-1 {
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
   .sm\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -28612,6 +28684,16 @@ a:hover, a:focus {
   .sm\:inset-x-auto {
     right: auto;
     left: auto;
+  }
+
+  .sm\:-inset-y-1 {
+    top: -0.25rem;
+    bottom: -0.25rem;
+  }
+
+  .sm\:-inset-x-1 {
+    right: -0.25rem;
+    left: -0.25rem;
   }
 
   .sm\:top-0 {
@@ -28644,6 +28726,22 @@ a:hover, a:focus {
 
   .sm\:left-auto {
     left: auto;
+  }
+
+  .sm\:-top-1 {
+    top: -0.25rem;
+  }
+
+  .sm\:-right-1 {
+    right: -0.25rem;
+  }
+
+  .sm\:-bottom-1 {
+    bottom: -0.25rem;
+  }
+
+  .sm\:-left-1 {
+    left: -0.25rem;
   }
 
   .sm\:resize-none {
@@ -37279,6 +37377,10 @@ a:hover, a:focus {
     flex-grow: 0;
   }
 
+  .md\:flex-grow-3 {
+    flex-grow: 3;
+  }
+
   .md\:flex-grow {
     flex-grow: 1;
   }
@@ -44876,6 +44978,13 @@ a:hover, a:focus {
     left: auto;
   }
 
+  .md\:-inset-1 {
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
   .md\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -44894,6 +45003,16 @@ a:hover, a:focus {
   .md\:inset-x-auto {
     right: auto;
     left: auto;
+  }
+
+  .md\:-inset-y-1 {
+    top: -0.25rem;
+    bottom: -0.25rem;
+  }
+
+  .md\:-inset-x-1 {
+    right: -0.25rem;
+    left: -0.25rem;
   }
 
   .md\:top-0 {
@@ -44926,6 +45045,22 @@ a:hover, a:focus {
 
   .md\:left-auto {
     left: auto;
+  }
+
+  .md\:-top-1 {
+    top: -0.25rem;
+  }
+
+  .md\:-right-1 {
+    right: -0.25rem;
+  }
+
+  .md\:-bottom-1 {
+    bottom: -0.25rem;
+  }
+
+  .md\:-left-1 {
+    left: -0.25rem;
   }
 
   .md\:resize-none {
@@ -53561,6 +53696,10 @@ a:hover, a:focus {
     flex-grow: 0;
   }
 
+  .lg\:flex-grow-3 {
+    flex-grow: 3;
+  }
+
   .lg\:flex-grow {
     flex-grow: 1;
   }
@@ -61158,6 +61297,13 @@ a:hover, a:focus {
     left: auto;
   }
 
+  .lg\:-inset-1 {
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
   .lg\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -61176,6 +61322,16 @@ a:hover, a:focus {
   .lg\:inset-x-auto {
     right: auto;
     left: auto;
+  }
+
+  .lg\:-inset-y-1 {
+    top: -0.25rem;
+    bottom: -0.25rem;
+  }
+
+  .lg\:-inset-x-1 {
+    right: -0.25rem;
+    left: -0.25rem;
   }
 
   .lg\:top-0 {
@@ -61208,6 +61364,22 @@ a:hover, a:focus {
 
   .lg\:left-auto {
     left: auto;
+  }
+
+  .lg\:-top-1 {
+    top: -0.25rem;
+  }
+
+  .lg\:-right-1 {
+    right: -0.25rem;
+  }
+
+  .lg\:-bottom-1 {
+    bottom: -0.25rem;
+  }
+
+  .lg\:-left-1 {
+    left: -0.25rem;
   }
 
   .lg\:resize-none {
@@ -69843,6 +70015,10 @@ a:hover, a:focus {
     flex-grow: 0;
   }
 
+  .xl\:flex-grow-3 {
+    flex-grow: 3;
+  }
+
   .xl\:flex-grow {
     flex-grow: 1;
   }
@@ -77440,6 +77616,13 @@ a:hover, a:focus {
     left: auto;
   }
 
+  .xl\:-inset-1 {
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
   .xl\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -77458,6 +77641,16 @@ a:hover, a:focus {
   .xl\:inset-x-auto {
     right: auto;
     left: auto;
+  }
+
+  .xl\:-inset-y-1 {
+    top: -0.25rem;
+    bottom: -0.25rem;
+  }
+
+  .xl\:-inset-x-1 {
+    right: -0.25rem;
+    left: -0.25rem;
   }
 
   .xl\:top-0 {
@@ -77490,6 +77683,22 @@ a:hover, a:focus {
 
   .xl\:left-auto {
     left: auto;
+  }
+
+  .xl\:-top-1 {
+    top: -0.25rem;
+  }
+
+  .xl\:-right-1 {
+    right: -0.25rem;
+  }
+
+  .xl\:-bottom-1 {
+    bottom: -0.25rem;
+  }
+
+  .xl\:-left-1 {
+    left: -0.25rem;
   }
 
   .xl\:resize-none {

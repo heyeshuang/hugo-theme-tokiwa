@@ -1,6 +1,5 @@
-<div class="font-serif">
-	{{ if .Site.Menus.main }}
-	<ul >
+	<ul class="font-serif flex-grow-0 flex justify-between flex-wrap md:flex-col">
+		{{ if .Site.Menus.main }}
 		{{ range .Site.Menus.main }}
 		<li>
 			<a href="{{ .URL }}" title="{{ .Name }} page">
@@ -8,7 +7,10 @@
 			</a>
 		</li>
 		{{ end }}
+		{{ if .OutputFormats.Get "RSS" }}
+		<li>
+			<a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'>RSS</a>
+		</li>
+		{{ end }}
+		{{ end }}
 	</ul>
-	{{ end }}
-</div>
-{{ partial "social-follow.html" . }}
