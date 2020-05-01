@@ -39,61 +39,96 @@ hr {
   margin-bottom: 0.8em;
   height: 10px;
 }
+hr.double-line {
+    border: none;
+    border-bottom: 1px solid theme('colors.java.500');
+    border-top: 1px solid theme('colors.java.300');
+    margin-bottom: 0.8em;
+    height: 1px;
+}
+
+a:not(.icon) {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size cubic-bezier(0, .5, 0, 1) 0.3s;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background-size: 100% 2px;
+    }
+}
 
 a {
-  color: theme('colors.eucalyptus.500');
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
+    color: theme('colors.eucalyptus.500');
+
+    &:hover,
+    &:focus {
+        color: theme('colors.java.500');
+    }
 }
 
-a:hover,
-a:focus {
-        color: theme('colors.java.500');
-  text-decoration: none;
-  background-size: 100% 2px;
-}
 
 .c-rich-text {
     @apply font-sans font-normal text-base leading-relaxed;
+
     ::selection {
-        color:theme('colors.java.100');
+        color: theme('colors.java.100');
         // background-color: theme('colors.eucalyptus.600');
         background-color: theme('colors.java.700');
     }
-    > * + * {
+
+    a {
+        color: theme('colors.eucalyptus.500');
+
+        &:hover,
+        &:focus {
+            color: theme('colors.java.500');
+        }
+    }
+
+    >*+* {
         margin-top: 1rem;
     }
+
     ul {
         list-style-type: square;
         list-style-position: inside
     }
+
     ol {
         list-style-type: lower-greek;
         list-style-position: inside
     }
-    li > ol, li > ul {
+
+    li>ol,
+    li>ul {
         margin-left: theme("spacing.2")
     }
+
     .footnotes ol {
         list-style-type: decimal;
         list-style-position: outside
     }
+
     mark {
-        background-color:theme("colors.java.300");
-        border-bottom-color:theme("colors.java.600");
+        background-color: theme("colors.java.300");
+        border-bottom-color: theme("colors.java.600");
         border-bottom-width: 2px;
         padding: 2px;
         margin: 0 5px
     }
+
     table {
         @apply overflow-x-auto scrolling-auto;
         table-layout: auto
     }
-    th,td {
+
+    th,
+    td {
         border-bottom-color: theme("colors.java.600");
         border-bottom-width: 1px;
         padding-top: 0.5rem;
@@ -101,24 +136,32 @@ a:focus {
         padding-left: 1rem;
         padding-right: 1rem
     }
-    th {
-        border-top-width: 1px;
-        background-color:theme("colors.java.100");
-        border-top-color: theme("colors.java.600")
-    }
 
-    b, strong {
-        font-weight: theme('fontWeight.bold');
-        color: theme('colors.eucalyptus.600')
-    }
-    i, em {
-        font-style: italic
-    }
-    sub, sup {
-        font-size: theme('fontSize.xs');
-        vertical-align: baseline
-    }
-    acronym, abbr {
+         th {
+             border-top-width: 1px;
+             background-color: theme("colors.java.100");
+             border-top-color: theme("colors.java.600")
+         }
+
+         b,
+         strong {
+             font-weight: theme('fontWeight.bold');
+             color: theme('colors.eucalyptus.600')
+         }
+
+         i,
+         em {
+             font-style: italic
+         }
+
+         sub,
+         sup {
+             font-size: theme('fontSize.xs');
+             vertical-align: baseline
+         }
+
+         acronym,
+         abbr {
         border-bottom: 1px dotted;
         font-variant: normal;
         text-decoration: none;
@@ -147,13 +190,6 @@ a:focus {
     .highlight{
         @apply scrolling-auto overflow-x-auto
     } 
-    hr {
-        border: none;
-        border-bottom: 1px solid theme('colors.java.500');
-        border-top: 1px solid theme('colors.java.300');
-        margin-bottom: 0.8em;
-        height: 1px;
-    }  
     blockquote {
         @apply relative font-light ml-8 mr-6 pl-3 ; 
         @apply border-l-2 border-java-500;

@@ -15,7 +15,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "wp --config webpack/dev.config.js",
-    "build": "wp --config webpack/prod.config.js",
+    "build": "NODE_ENV=production wp --config webpack/prod.config.js",
     "start": "npm run build"
   },
   "devDependencies": {

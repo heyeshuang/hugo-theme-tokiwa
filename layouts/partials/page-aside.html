@@ -1,4 +1,7 @@
-{{ partial "site-navigation.html" . }}
-<a href="{{ .Site.BaseURL }}">
-	&copy; {{ now.Format "2006" }} {{ .Site.Title }}
-</a>
+<div class="md:max-w-xs  flex flex-col md:items-end">
+	{{ partial "site-navigation.html" . }}
+	<div class="text-sm text-gray-500 leading-tight">
+		Built with Hugo and theme Tokiwa.<br/>
+		{{.Site.Copyright|safeHTML}}
+	</div>
+</div>

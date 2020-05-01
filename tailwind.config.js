@@ -17,6 +17,12 @@ module.exports = {
       minHeight:{
         '70vh':'70vh'
       },
+      maxHeight:{
+        '16':'5rem'
+      },
+      maxWidth:{
+        'xxs':'15em'
+      },
       colors: { // color scheme:
         // https://javisperez.github.io/tailwindcolorshades/#/?blue-stone=085f63&java=49beb7&golden-tainoi=facf5a&eucalyptus=028760&Medium%20Red%20Violet=c64191&tv=1
       'eucalyptus': {

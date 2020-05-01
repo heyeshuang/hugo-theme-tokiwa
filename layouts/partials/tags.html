@@ -1,9 +1,9 @@
-<div class="md:flex-grow">
+<div class="md:flex-grow-0 font-light">
 	{{ if isset .Params "categories" }}
 	{{ $count := len .Params.categories}}
 	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.categories}}
-	<a class="post-taxonomy-category text-eucalyptus-700"
+	<a class="post-taxonomy-category text-medium-red-violet-600 hover:text-medium-red-violet-400"
 		href="/categories/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
 	{{end}}&nbsp;
 	{{end}}
@@ -12,7 +12,7 @@
 	{{ $count := len .Params.tags }}
 	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.tags }}
-	<a class="post-taxonomy-tag" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+	<a class="post-taxonomy-tag text-eucalyptus-500" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
 	{{ end }}
 	{{ end }}
 	{{ end }}

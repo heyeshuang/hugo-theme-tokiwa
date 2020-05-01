@@ -9,9 +9,9 @@
 {{with .Description}}
 <h3 class="text-java-700 font-normal leading-relaxed pt-2">{{.}}</h3>
 {{end}}
-<div class="flex flex-wrap justify-between pt-2 ">
+<div class="flex flex-wrap justify-end pt-2 ">
 	{{- partial "tags.html" . -}}
-	<time class="text-eucalyptus-600 md:text-right md:flex-grow"
+	<time class="text-eucalyptus-500 md:text-right md:flex-grow font-light"
 		datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 		&nbsp;{{- .Date.Format "2006年1月2日" -}}
 	</time>

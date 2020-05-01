@@ -1,7 +1,7 @@
 # theme.toml template for a Hugo theme
 
-name = "Starter Theme"
-license = "MIT"
+name = "Tokiwa"
+license = "GPL"
 licenselink = "https://github.com/jimfrenette/hugo-starter/blob/master/LICENSE.md"
 description = "Blank starter theme with only normalized styles. Included is a webpack workflow for building javascript and css from sass with a live reload webpack development server."
 homepage = "https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/"
