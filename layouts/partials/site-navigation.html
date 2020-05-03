@@ -1,16 +1,17 @@
-	<ul class="font-serif flex-grow-0 flex justify-between flex-wrap md:flex-col">
-		{{ if .Site.Menus.main }}
-		{{ range .Site.Menus.main }}
-		<li>
-			<a href="{{ .URL }}" title="{{ .Name }} page">
-				{{ .Name }}
-			</a>
-		</li>
-		{{ end }}
-		{{ if .OutputFormats.Get "RSS" }}
-		<li>
-			<a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'>RSS</a>
-		</li>
-		{{ end }}
-		{{ end }}
-	</ul>
+<ul class="font-serif flex-grow-0 flex justify-between flex-wrap md:flex-col">
+	{{ if .Site.Menus.main }}
+	{{ range .Site.Menus.main }}
+	<li class="px-1 md:px-0">
+		<a href="{{ .URL }}" title="{{ .Name }} page" {{ if eq ($.Permalink| absURL ) (.URL|absURL) }}
+			class="font-bold text-medium-red-violet-600 hover:text-medium-red-violet-400" {{ end }}>
+			{{ .Name }}
+		</a>
+	</li>
+	{{ end }}
+	{{ if .OutputFormats.Get "RSS" }}
+	<li>
+		<a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'>RSS</a>
+	</li>
+	{{ end }}
+	{{ end }}
+</ul>

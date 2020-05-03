@@ -4,11 +4,40 @@
 		{{- .Content -}}
 	</section>
 	<section>
-		{{ range .Paginator.Pages }}
-		<div>
-			{{- partial "summary.html" . -}}
-		</div>
+		{{ range (.Paginator 25).Pages.GroupByDate "2006" }}
+		<!-- <hr class="pt-4" /> -->
+		<section class="flex flex-col md:flex-row items-start justify-between">
+			<div class="pl-4 pb-2 md:sticky top-0 order-1 md:order-2">
+				<h2 class="">{{ .Key }}</h2>
+			</div>
+			<ul class="order-2 md:order-1">
+				{{ range .Pages }}
+				<div>
+					<div>
+						<a href="{{ .Permalink }}">
+							{{ .Title }}
+						</a>
+					</div>
+					{{ with .Description }}
+					<div>{{.}}</div>
+					{{ end }}
+				</div>
+				{{ end }}
+			</ul>
+		</section>
 		{{ end }}
+		<!-- {{ range .Paginator.Pages }}
+		<div>
+			<div>
+				<a href="{{ .Permalink }}">
+					{{ .Title }}
+				</a>
+			</div>
+			{{ with .Description }}
+			<div>{{.}}</div>
+			{{ end }}
+		</div>
+		{{ end }} -->
 	</section>
 </article>
 {{ end }}
