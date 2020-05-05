@@ -235,6 +235,15 @@ a {
     @apply text-java-400 ;
 }
 
+@media all and  (min-width:1024px){
+.waterfall {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+  .pin {
+    break-inside: avoid;
+    padding: 5px;
+  }}
 /* purgecss end ignore */
 
 @import "tailwindcss/utilities";
