@@ -17,6 +17,10 @@ module.exports = {
       minHeight:{
         '70vh':'70vh'
       },
+      minWidth:{
+        '0.7':"70%",
+        '0.4':"40%"
+      },
       inset:{
         "-1":"-0.25rem"
       },

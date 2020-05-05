@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $pageCount := 8 }}
 {{ $data := .Data }}
 <article>
 	<div>
@@ -6,16 +7,29 @@
 	</div>
 </article>
 <div>
-	<section>
+	<section class="flex flex-wrap">
 		{{ range $key, $value := .Data.Terms }}
-		<h2>
-			<a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">
-				{{ $.Data.Singular | humanize }}: {{ $key }}
-			</a>
-		</h2>
-		{{ range $value.Pages }}
-		{{ partial "summary.html" . }}
-		{{ end }}
+		<section class="w-full xl:w-1/2 xl:pr-4">
+		<hr class="p-0 my-4" />
+			<div class="clearfix">
+				<span class="float-left text-3xl pr-6 font-serif pt-1">
+					<a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">
+						{{ $key }}
+					</a>
+				</span>
+				{{$count:=len ( first $pageCount $value.Pages ) }}
+				{{ range $k,$v:=( first $pageCount $value.Pages ) }}
+				<a class="leading-relaxed text-gray-600 hover:text-gray-700 focus:text-gray-700 font-light "
+					href="{{ .Permalink }}">
+					{{ $v.Title }}
+				</a>
+				<span class="text-gray-600">{{ if lt $k (sub $count 1) }}&nbsp;&#47;&nbsp;{{ end }}</span>
+				{{ end }}
+				{{ if gt (len $value.Pages) $pageCount }}
+				<span class="text-gray-600">&nbsp;&#47;&nbsp;&hellip;</span>
+				{{ end }}
+			</div>
+		</section>
 		{{ end }}
 	</section>
 </div>

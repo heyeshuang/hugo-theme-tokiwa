@@ -6374,6 +6374,14 @@ a:hover, a:focus {
   min-width: 100%;
 }
 
+.min-w-0\.7 {
+  min-width: 70%;
+}
+
+.min-w-0\.4 {
+  min-width: 40%;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -22690,6 +22698,14 @@ a:hover, a:focus {
 
   .sm\:min-w-full {
     min-width: 100%;
+  }
+
+  .sm\:min-w-0\.7 {
+    min-width: 70%;
+  }
+
+  .sm\:min-w-0\.4 {
+    min-width: 40%;
   }
 
   .sm\:object-contain {
@@ -39011,6 +39027,14 @@ a:hover, a:focus {
     min-width: 100%;
   }
 
+  .md\:min-w-0\.7 {
+    min-width: 70%;
+  }
+
+  .md\:min-w-0\.4 {
+    min-width: 40%;
+  }
+
   .md\:object-contain {
     -o-object-fit: contain;
        object-fit: contain;
@@ -55330,6 +55354,14 @@ a:hover, a:focus {
     min-width: 100%;
   }
 
+  .lg\:min-w-0\.7 {
+    min-width: 70%;
+  }
+
+  .lg\:min-w-0\.4 {
+    min-width: 40%;
+  }
+
   .lg\:object-contain {
     -o-object-fit: contain;
        object-fit: contain;
@@ -71647,6 +71679,14 @@ a:hover, a:focus {
 
   .xl\:min-w-full {
     min-width: 100%;
+  }
+
+  .xl\:min-w-0\.7 {
+    min-width: 70%;
+  }
+
+  .xl\:min-w-0\.4 {
+    min-width: 40%;
   }
 
   .xl\:object-contain {
