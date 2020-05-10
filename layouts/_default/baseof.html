@@ -35,6 +35,9 @@
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
+  	{{ if or .Params.math .Site.Params.math }}
+  	{{ partial "math.html" . }}
+  	{{ end }}
 </head>
 
 <body class="bg-gray-100 text-gray-700">
