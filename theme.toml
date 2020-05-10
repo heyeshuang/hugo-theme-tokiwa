@@ -1,14 +1,12 @@
-# theme.toml template for a Hugo theme
-
 name = "Tokiwa"
 license = "GPL"
-licenselink = "https://github.com/jimfrenette/hugo-starter/blob/master/LICENSE.md"
-description = "Blank starter theme with only normalized styles. Included is a webpack workflow for building javascript and css from sass with a live reload webpack development server."
-homepage = "https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/"
-tags = ["starter", "minimal", "development", "website", "responsive", "blog"]
+licenselink = "https://github.com/heyeshuang/hugo-theme-tokiwa/blob/master/LICENSE.md"
+description = "A minimal theme inspired by the color tokiwa-iro (常磐色)."
+homepage = "https://github.com/heyeshuang/hugo-theme-tokiwa"
+tags = ["minimal", "website", "responsive", "blog"]
 features = ["posts", "shortcodes", "related content", "comments"]
 min_version = "0.38"
 
 [author]
-  name = "Jim Frenette"
-  homepage = "https://jimfrenette.com"
+  name = "He Yeshuang"
+  homepage = "https:/heysh.xyz"
