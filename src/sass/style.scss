@@ -1,6 +1,6 @@
 @charset "UTF-8";
 // @import "normalize";
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
@@ -244,6 +244,6 @@ a {
     break-inside: avoid;
     padding: 5px;
   }}
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 @import "tailwindcss/utilities";
