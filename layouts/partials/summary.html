@@ -1,12 +1,23 @@
-<div>
-	<div>
-		<div>
-			<a href="{{ .Permalink }}">
-				{{ .Title }}
-			</a>
-		</div>
-		{{ with .Description }}
-		<div>{{.}}</div>
-		{{ end }}
+<div class="pb-8">
+	<div class="font-serif font-medium text-xl">
+		<a href="{{ .Permalink }}">
+			{{ .Title }}
+		</a>
+	</div>
+	{{/*I just don't like .Summary */}}
+	{{/*  <div class="pl-4  text-gray-600 font-light italic">  */}}
+	{{/*  {{ if   .Description}}{{ .Description }}{{else}}{{ .Summary }}{{end}}
+</div> */}}
+	{{ with .Description }}
+	<div class="font-serif text-gray-600 font-light italic pt-1">
+		{{ .}}</div>
+
+	{{ end }}
+	<div class="flex flex-wrap justify-between pt-1">
+		{{- partial "tags.html" . -}}
+		<time class="text-eucalyptus-500 md:text-right md:flex-grow font-light"
+			datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+			{{- .Date.Format "2006-1-2 15:04" -}}
+		</time>
 	</div>
 </div>

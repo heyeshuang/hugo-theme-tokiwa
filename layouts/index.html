@@ -1,57 +1,22 @@
 {{ define "main" }}
-<article>
-	{{ .Content }}
-</article>
-{{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of
-pages. */}}
-{{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
-{{/* Create a variable with that section to use in multiple places. */}}
-{{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
-{{/* Check to see if the section is defined for ranging through it */}}
-{{ $section_count := len $section }}
-{{ if ge $section_count 1 }}
-{{/* Derive the section name */}}
-{{ $section_name := index (.Site.Params.mainSections) 0 }}
+{{ if isset .Site.Params "description" }}
+<div class="font-serif text-medium-red-violet-400 pt-3">
+	{{ .Site.Params.Description | markdownify }}
+</div>
+<hr  class="pt-2"/>
+{{end}}
 
 <div>
-	{{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
-	{{ with .Site.GetPage "section" $section_name }}
-	<h1>
-		Recent {{ .Title }}
-	</h1>
-	{{ end }}
-
-	{{ $n_posts := $.Param "recent_posts_number" | default 3 }}
-
 	<section>
-		{{/* Range through the first $n_posts items of the section */}}
-		{{ range (first $n_posts $section) }}
-		<div>
+		{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+		{{ range (.Paginate $pages 6).Pages }}<div>
 			{{ partial "summary.html" . }}
 		</div>
 		{{ end }}
 	</section>
-
-	{{ if ge $section_count (add $n_posts 1) }}
-	<section>
-		<h1>More</h1>
-		{{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first"
-		on the outside */}}
-		{{ range (first 4 (after $n_posts $section)) }}
-		<h2>
-			<a href="{{ .Permalink }}">
-				{{ .Title }}
-			</a>
-		</h2>
-		{{ end }}
-
-		{{/* As above, Use $section_name to get the section title, and URL. Use "with" to only show it if it exists */}}
-		{{ with .Site.GetPage "section" $section_name }}
-		<a href="{{ .Permalink }}">All {{.Title }}</a>
-		{{ end }}
-	</section>
-	{{ end }}
-
 </div>
 {{ end }}
+
+{{ define "footer" }}
+{{ partial "list-footer.html" . }}
 {{ end }}

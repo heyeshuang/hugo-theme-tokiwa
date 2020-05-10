@@ -1,2 +1,6 @@
-<hr class="double-line"/>
+
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<hr />
+{{end}}
 {{- partial "pagination.html" . -}}

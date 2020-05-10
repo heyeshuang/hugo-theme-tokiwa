@@ -1,12 +1,10 @@
 {{ define "main" }}
-<article>
-	<div>
-		<p>Below you will find pages that utilize the taxonomy term “{{ .Title }}”</p>
-	</div>
-</article>
+<h1 class="pb-4">
+	{{ .Title }}
+</h1>
 <div>
 	<section>
-		{{ range .Pages }}
+		{{ range (.Paginator 10).Pages }}
 		<div>
 			{{ partial "summary.html" . }}
 		</div>
@@ -14,3 +12,6 @@
 	</section>
 </div>
 {{ end }}
+{{define "footer"}}
+{{ partial "list-footer.html" . }}
+{{end}}
