@@ -1,6 +1,6 @@
 
 {{ $count := len .Site.Social}}
-<div class="flex flex-wrap-reverse justify-end content-end md:content-start items-start {{if gt $count 4}}flex-col{{end}} pb-2 max-h-16">
+<div class="flex flex-wrap-reverse md:justify-end content-end md:content-start justify-start items-start {{if gt $count 4}}md:flex-col{{end}} pb-2 max-h-16">
 	{{ range $key,$value:=.Site.Social }}
 	<a href='{{$value}}' target="_blank" class="{{- $key}} icon pl-1 text-eucalyptus-400 hover:text-java-400" title="{{- $key}} link" rel="noopener"
 		aria-label="follow on {{$key}}——Opens in a new window">
