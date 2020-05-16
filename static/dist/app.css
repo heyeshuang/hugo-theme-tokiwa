@@ -702,7 +702,7 @@ hr {
 }
 
 hr.double-line {
-  border-top: 3px double #028760;
+  border-top: 3px double #4EAB90;
   text-align: center;
   border-bottom: none;
 }
@@ -714,7 +714,7 @@ hr.double-line:after {
   top: -27px;
   padding: 0 10px;
   background: #f7fafc;
-  color: #028760;
+  color: #4EAB90;
   font-size: 30px;
 }
 

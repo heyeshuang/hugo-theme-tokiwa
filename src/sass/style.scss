@@ -65,7 +65,7 @@ hr {
 //   padding: 0 0.5em; /* size of background color knockout */
 // }
 hr.double-line {
-	border-top: 3px double theme('colors.eucalyptus.500');
+	border-top: 3px double theme('colors.eucalyptus.400');
     text-align: center;
     border-bottom: none;
 }
@@ -76,7 +76,7 @@ hr.double-line:after {
 	top: -27px;
 	padding: 0 10px;
 	background: theme("colors.gray.100");
-	color: theme('colors.eucalyptus.500');
+	color: theme('colors.eucalyptus.400');
 	font-size: 30px;
 }
 
