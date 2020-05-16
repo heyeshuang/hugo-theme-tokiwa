@@ -103,6 +103,13 @@ a {
         color: theme('colors.java.500');
     }
 }
+.a-gray a {
+    @apply text-gray-600;
+    &:hover,
+    &:focus {
+        color: theme('colors.gray.400');
+    }
+}
 
 
 .c-rich-text {

@@ -1,7 +1,15 @@
+{{$scratch := newScratch}}
+{{ range (.Site.Pages)}}
+{{$scratch.Add "total" .WordCount}}
+{{ end }}
 <div class="md:max-w-xs  flex flex-col md:items-end pt-2">
 	{{ partial "social-follow.html" . }}
-	<div class="text-sm text-gray-500 leading-tight">
-		Built with Hugo and theme Tokiwa.<br/>
+	<div class="a-gray text-sm text-gray-500 leading-tight">
 		{{.Site.Copyright|safeHTML}}
+		<br />
+		Built with Hugo and theme <a 
+			href="https://github.com/heyeshuang/hugo-theme-tokiwa">Tokiwa</a>.
+			<br />
+			{{ len  .Site.Pages }} pages, {{$scratch.Get "total" }} words in total.
 	</div>
 </div>

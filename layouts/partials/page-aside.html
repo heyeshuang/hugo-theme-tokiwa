@@ -2,7 +2,9 @@
 	{{ partial "site-navigation.html" . }}
 	{{ partial "social-follow.html" . }}
 	<div class="text-sm text-gray-500 leading-tight">
-		Built with Hugo and theme Tokiwa.<br/>
 		{{.Site.Copyright|safeHTML}}
+		<br />
+		Built with Hugo and theme <a class='text-gray-500 hover:text-gray-400 focus:text-gray-400'
+			href="https://github.com/heyeshuang/hugo-theme-tokiwa">Tokiwa</a>. {{.WordCount }} words in this page.
 	</div>
 </div>
