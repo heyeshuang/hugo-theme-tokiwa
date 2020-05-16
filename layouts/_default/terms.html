@@ -19,7 +19,7 @@
 				</span>
 				{{$count:=len ( first $pageCount $value.Pages ) }}
 				{{ range $k,$v:=( first $pageCount $value.Pages ) }}
-				<a class="leading-relaxed text-gray-600 hover:text-gray-700 focus:text-gray-700 font-light "
+				<a class="font-serif leading-relaxed text-gray-600 hover:text-gray-700 focus:text-gray-700 font-light "
 					href="{{ .Permalink }}">
 					{{ $v.Title }}
 				</a>

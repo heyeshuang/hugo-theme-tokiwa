@@ -3,7 +3,7 @@
 	{{ range .Site.Menus.main }}
 	<li class="px-1 md:px-0">
 		<a href="{{ .URL }}" title="{{ .Name }} page" {{ if in ($.Permalink| absURL ) (.URL|absURL) }}
-			class="font-bold text-medium-red-violet-600 hover:text-medium-red-violet-400" {{ end }}>
+			class="font-medium text-medium-red-violet-600 hover:text-medium-red-violet-400" {{ end }}>
 			{{ .Name }}
 		</a>
 	</li>

@@ -37,10 +37,23 @@
 	{{ end }}
   	{{ if or .Params.math .Site.Params.math }}
   	{{ partial "math.html" . }}
-  	{{ end }}
+	  {{ end }}
+	{{ if ne $.Site.LanguageCode "en"}}
+	<!--pangu.js-->
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+</script>{{ end }}
 </head>
 
-<body class="bg-gray-100 text-gray-700">
+<body class="bg-gray-100 text-gray-700 font-sans">
 	<div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
 		<header class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-1 md:order-1 max-w-2xl">
 			<div class="z-50 bg-gray-100 lg:min-w-0.7 max-w-xl md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 pt-2">
