@@ -1,10 +1,9 @@
 <div class="md:max-w-xs  flex flex-col md:items-end">
 	{{ partial "site-navigation.html" . }}
 	{{ partial "social-follow.html" . }}
-	<div class="text-sm text-gray-500 leading-tight">
+	<div class="text-sm text-gray-500 leading-tight a-gray">
 		{{.Site.Copyright|safeHTML}}
 		<br />
-		Built with Hugo and theme <a class='text-gray-500 hover:text-gray-400 focus:text-gray-400'
-			href="https://github.com/heyeshuang/hugo-theme-tokiwa">Tokiwa</a>. {{.WordCount }} words in this page.
+		Built with Hugo and theme <a href="https://github.com/heyeshuang/hugo-theme-tokiwa">Tokiwa</a>. {{.WordCount }} words in this page.
 	</div>
 </div>

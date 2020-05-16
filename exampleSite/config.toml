@@ -1,0 +1,85 @@
+baseURL = "https://example.com"
+title = "测试文字"
+author = "He Yeshuang"
+copyright = "Copyright © 2008–2019"
+languageCode = "zh-cn"
+DefaultContentLanguage = "zh-cn"
+hasCJKLanguage=true
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+disqusShortname = "YOURSHORTNAME"
+googleAnalytics = "UA-FAKE"
+theme = "tokiwa"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params]
+description = """
+Tokiwa-iro is the theme color of this site.
+"""
+favicon = "img/favicon-32x32.png"
+math = true # for introducing $KaTEX$
+env = "production" # for Google Analytics and DISQUS.
+
+[menu]
+# Shown in the side menu.
+  [[menu.main]]
+    name = "归档"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "post"
+    url = "/post/"
+  [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Categories"
+    pre = "<i class='fa fa-folder fa-fw'></i>"
+    url = "/categories/"  
+    weight = 2
+
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 3
+    identifier = "about"
+    url = "/about/"
+
+  [[menu.main]]
+    name = "Theatre"
+    pre = "<i class='fa fa-video-camera fa-fw'></i>"
+    weight = 3
+    identifier = "sentences"
+    url = "/sentences/"
+
+  [[menu.main]]
+    name = "Begging"
+    pre = "<i class='fa fa-money fa-fw'></i>"
+    weight = 3
+    identifier = "begging"
+    url = "/wallet/"
+  [[menu.main]]
+    name = "Bud"
+    pre = "<i class='fa fa-pagelines fa-fw'></i>"
+    weight = 3
+    identifier = "home"
+    url = "https://heysh.xyz/"
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+[social]
+twitter="http://twitter.com/hh"
+bilibili="http://twitter.com/hh"
+weibo="http://twitter.com/hh"
+zhihu="http://twitter.com/hh"
+instagram="http://twitter.com/hh"
+gitlab="http://twitter.com/hh"
+youtube="http://twitter.com/hh"
+github="http://github.com/hh"
