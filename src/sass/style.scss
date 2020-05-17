@@ -284,54 +284,6 @@ a {
     }
 }
 
-@font-face {
-    font-family: "FancyTitleFont";
-    font-style: normal;
-    font-display: swap;
-    // src: url("/fonts/qiji.woff2")
-    src: url("/fonts/杨任东竹石体-Light.woff2") format('woff2'),
-        url("/fonts/杨任东竹石体-Light.woff") format('woff');
-}
-
-/* noto-serif-sc-300 - latin_chinese-simplified */
-@font-face {
-    font-family: 'Noto Serif CJK SC';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Noto Serif CJK SC Light'), local('NotoSerifCJK-Light'),
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-300.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-300.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* noto-serif-sc-regular - latin_chinese-simplified */
-@font-face {
-    font-family: 'Noto Serif CJK SC';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Noto Serif CJK SC'), local('NotoSerifCJK-Regular'),
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* noto-serif-sc-500 - latin_chinese-simplified */
-@font-face {
-    font-family: 'Noto Serif CJK SC';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local('Noto Serif CJK SC Medium'), local('NotoSerifCJK-Medium'),
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('/fonts/noto-serif-sc-v7-latin_chinese-simplified-500.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 /* noto-sans-sc-400 - latin_chinese-simplified */
 // @font-face {
 //     font-family: 'Noto Sans CJK SC';

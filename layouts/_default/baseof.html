@@ -29,48 +29,106 @@
 	{{ end }}
 
 	{{ with .OutputFormats.Get "RSS" }}
-    	<link rel="alternate" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
-		<link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
+	<link rel="alternate" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
+	<link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
 	{{end}}
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
-  	{{ if or .Params.math .Site.Params.math }}
-  	{{ partial "math.html" . }}
-	  {{ end }}
+	{{ if or .Params.math .Site.Params.math }}
+	{{ partial "math.html" . }}
+	{{ end }}
 	{{ if ne $.Site.LanguageCode "en"}}
 	<!--pangu.js-->
-<script>
-(function(u, c) {
-  var d = document, t = 'script', o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-  o.src = u;
-  if (c) { o.addEventListener('load', function(e) { c(e); }); }
-  s.parentNode.insertBefore(o, s);
-})('//cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js', function() {
-  pangu.spacingPage();
-});
-</script>{{ end }}
+	<script>
+		(function (u, c) {
+			var d = document,
+				t = 'script',
+				o = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			o.src = u;
+			if (c) {
+				o.addEventListener('load', function (e) {
+					c(e);
+				});
+			}
+			s.parentNode.insertBefore(o, s);
+		})('//cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js', function () {
+			pangu.spacingPage();
+		});
+	</script>
+	<!-- @font-face for Chinese -->
+	<style type="text/css" media="screen, print">
+		@font-face {
+			font-family: "FancyTitleFont";
+			font-style: normal;
+			font-display: swap;
+			src: url('{{ "fonts/杨任东竹石体-Light.woff2" | absURL }}') format('woff2'),
+				url('{{ "fonts/杨任东竹石体-Light.woff" | absURL }}') format('woff');
+		}
+
+		/* noto-serif-sc-300 - latin_chinese-simplified */
+		@font-face {
+			font-family: 'Noto Serif CJK SC';
+			font-style: normal;
+			font-weight: 300;
+			font-display: swap;
+			src: local('Noto Serif CJK SC Light'), local('NotoSerifCJK-Light'),
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-300.woff2" | absURL }}') format('woff2'),
+				/* Chrome 26+, Opera 23+, Firefox 39+ */
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-300.woff" | absURL }}') format('woff');
+			/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		}
+
+		/* noto-serif-sc-regular - latin_chinese-simplified */
+		@font-face {
+			font-family: 'Noto Serif CJK SC';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: local('Noto Serif CJK SC'), local('NotoSerifCJK-Regular'),
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-regular.woff2" | absURL }}') format('woff2'),
+				/* Chrome 26+, Opera 23+, Firefox 39+ */
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-regular.woff" | absURL }}') format('woff');
+			/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		}
+
+		/* noto-serif-sc-500 - latin_chinese-simplified */
+		@font-face {
+			font-family: 'Noto Serif CJK SC';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: local('Noto Serif CJK SC Medium'), local('NotoSerifCJK-Medium'),
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-500.woff2" | absURL }}') format('woff2'),
+				/* Chrome 26+, Opera 23+, Firefox 39+ */
+				url('{{"fonts/noto-serif-sc-v7-latin_chinese-simplified-500.woff" | absURL }}') format('woff');
+			/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		}
+	</style>
+	{{ end }}
 </head>
 
 <body class="bg-gray-100 text-gray-700 font-sans">
 	<div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
 		<header class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-1 md:order-1 max-w-2xl">
-			<div class="z-50 bg-gray-100 lg:min-w-0.7 max-w-xl md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 pt-2">
+			<div
+				class="z-50 bg-gray-100 lg:min-w-0.7 max-w-xl md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 pt-2">
 				{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
 			</div>
 		</header>
 		<main role="main" class="w-full md:w-3/5 xl:w-1/2 max-w-3xl order-2 md:order-2 min-h-70vh pt-2 pb-4">
 			{{ block "main" . }}{{ end }}
 		</main>
-		<aside role="contentinfo" class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-4 md:order-3 md:sticky md:bottom-0 self-end max-w-2xl">
+		<aside role="contentinfo"
+			class="w-full md:w-2/5 xl:w-1/2 md:pr-12 lg:pr-20 xl:pr-24 order-4 md:order-3 md:sticky md:bottom-0 self-end max-w-2xl">
 			<div class="md:float-right md:text-right leading-loose tracking-tight md:mb-2">
-			{{ block "aside" . }}{{ partial "site-aside.html" . }}{{ end }}
+				{{ block "aside" . }}{{ partial "site-aside.html" . }}{{ end }}
 			</div>
 		</aside>
 		<footer class="w-full md:w-3/5 xl:w-1/2 order-3 max-w-3xl md:order-4 pt-2">
-		{{ block "footer" . }}
-		{{ end }}
+			{{ block "footer" . }}
+			{{ end }}
 		</footer>
 		{{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
 	</div>
