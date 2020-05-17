@@ -4,7 +4,7 @@
 	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.categories}}
 	<a class="post-taxonomy-category text-medium-red-violet-600 hover:text-medium-red-violet-400"
-		href="/categories/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+		href='{{"/categories/"| relURL}}{{ . | urlize }}'>{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
 	{{end}}
 	{{end}}
 	{{end}}
@@ -18,7 +18,7 @@
 	{{ if gt $count 0 }}
 	{{ range $k, $v := .Params.tags }}
 	<a class="post-taxonomy-tag text-eucalyptus-500"
-		href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+		href='{{"/tags/"| relURL}}{{ . | urlize }}'>{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
 	{{ end }}
 	{{ end }}
 	{{ end }}

@@ -65,19 +65,20 @@ hr {
 //   padding: 0 0.5em; /* size of background color knockout */
 // }
 hr.double-line {
-	border-top: 3px double theme('colors.eucalyptus.400');
+    border-top: 3px double theme('colors.eucalyptus.400');
     text-align: center;
     border-bottom: none;
 }
+
 hr.double-line:after {
-	content: '\2767';
-	display: inline-block;
-	position: relative;
-	top: -27px;
-	padding: 0 10px;
-	background: theme("colors.gray.100");
-	color: theme('colors.eucalyptus.400');
-	font-size: 30px;
+    content: '\2767';
+    display: inline-block;
+    position: relative;
+    top: -27px;
+    padding: 0 10px;
+    background: theme("colors.gray.100");
+    color: theme('colors.eucalyptus.400');
+    font-size: 30px;
 }
 
 a:not(.icon) {
@@ -103,8 +104,10 @@ a {
         color: theme('colors.java.500');
     }
 }
+
 .a-gray a {
     @apply text-gray-600;
+
     &:hover,
     &:focus {
         color: theme('colors.gray.400');
@@ -286,8 +289,8 @@ a {
     font-style: normal;
     font-display: swap;
     // src: url("/fonts/qiji.woff2")
-    src: url("/fonts/杨任东竹石体-Light.woff2");
-    src: url("/fonts/杨任东竹石体-Light.woff")
+    src: url("/fonts/杨任东竹石体-Light.woff2") format('woff2'),
+        url("/fonts/杨任东竹石体-Light.woff") format('woff');
 }
 
 /* noto-serif-sc-300 - latin_chinese-simplified */

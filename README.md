@@ -1,13 +1,22 @@
-# Theme Tokiwa for [Hugo](http://gohugo.io/)
+# Theme Tokiwa
 
-Tokiwa-iro is the main color tone and the name of this theme.
+Theme Tokiwa is a minimalistic blog theme. Tokiwa-iro is the main color tone and the name of this theme. 
 
-Built on the top of [Hugo Static Site Generator Blank Starter Theme](https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/).
+Built on the top of [Hugo Starter Theme](https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/) and [Tailwind CSS](https://tailwindcss.com/). Inspired by [Tailwind Toolbox - Minimalist-Blog](https://github.com/tailwindtoolbox/Minimalist-Blog).
+
+This theme is especially optimized for Chinese characters, while works well with other languages.
 
 ## Screenshot
 
-![1](images/screenshot.png)
+![1](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot.png)
+![2](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot02.png)
 
+## Install
+
+Inside the folder of your Hugo site run:
+```bash
+$ git submodule add https://github.com/heyeshuang/hugo-theme-tokiwa.git themes/tokiwa
+```
 ## available config params
 
 ```toml
@@ -43,7 +52,7 @@ youtube="http://twitter.com/hh"
 github="http://github.com/hh"
 ```
 
-A complete `config.toml` is in the `exampleSite` folder.
+A complete `config.toml` example is in the `exampleSite` folder.
 
 
 ## Dev this Templates
@@ -76,7 +85,8 @@ npm run build
 
 * [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample.git) is used to mock data.
 * [Hugo Static Site Generator Blank Starter Theme](https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/)
-* Font `杨任东竹石体` is used for the banner. Non-Chinese user may want to delete `/static/fonts` to reduce the size.
+* [Tailwind Toolbox - Minimalist-Blog](https://github.com/tailwindtoolbox/Minimalist-Blog)
+* Font `杨任东竹石体` is used for the banner. 
 * Beautiful icons made by [Remix-Design](https://github.com/Remix-Design/remixicon).
 
 Thanks.

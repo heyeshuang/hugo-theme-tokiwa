@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://example.com/"
 title = "测试文字"
 author = "He Yeshuang"
 copyright = "Copyright © 2008–2019"
