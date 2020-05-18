@@ -29,6 +29,8 @@ Tokiwa-iro is the theme color of this site.
 """
 math = true # for introducing $KaTEX$
 env = "production" # for Google Analytics and DISQUS.
+useChineseFonts = true
+bannerFont = "fonts/exampleFont"
 
 [menu]
 # Shown in the side menu.
@@ -86,7 +88,8 @@ npm run build
 * [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample.git) is used to mock data.
 * [Hugo Static Site Generator Blank Starter Theme](https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/)
 * [Tailwind Toolbox - Minimalist-Blog](https://github.com/tailwindtoolbox/Minimalist-Blog)
-* Font `杨任东竹石体` is used for the banner. 
+* Fonts. `杨任东竹石体` was used for the banner in the beginning. This font is okay for commercial usage. However, I wonder if it is compatible with GPL, so I replaced it with an `exampleFont` in the `exampleSite`. See `config.toml`.
+* And the open, warm-hearted [Noto Serif CN](https://www.google.com/get/noto/help/cjk/). Always a good choice for Chinese words.
 * Beautiful icons made by [Remix-Design](https://github.com/Remix-Design/remixicon).
 
 Thanks.

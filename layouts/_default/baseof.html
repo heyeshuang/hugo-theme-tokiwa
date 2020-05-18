@@ -58,13 +58,14 @@
 		});
 	</script>
 	<!-- @font-face for Chinese -->
+	{{ if .Site.Params.useChineseFonts}}
 	<style type="text/css" media="screen, print">
 		@font-face {
 			font-family: "FancyTitleFont";
 			font-style: normal;
 			font-display: swap;
-			src: url('{{ "fonts/杨任东竹石体-Light.woff2" | absURL }}') format('woff2'),
-				url('{{ "fonts/杨任东竹石体-Light.woff" | absURL }}') format('woff');
+			src: url('{{ ( printf "%s%s" .Site.Params.bannerFont ".woff2") | absURL }}') format('woff2'),
+				url('{{ ( printf "%s%s" .Site.Params.bannerFont ".woff") | absURL }}') format('woff');
 		}
 
 		/* noto-serif-sc-300 - latin_chinese-simplified */
@@ -106,6 +107,7 @@
 			/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		}
 	</style>
+	{{end}}
 	{{ end }}
 </head>
 

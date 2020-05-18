@@ -1,5 +1,5 @@
 baseURL = "https://example.com/"
-title = "测试文字"
+title = "测试文字abc"
 author = "He Yeshuang"
 copyright = "Copyright © 2008–2019"
 languageCode = "zh-cn"
@@ -9,7 +9,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 disqusShortname = "YOURSHORTNAME"
 googleAnalytics = "UA-FAKE"
-theme = "tokiwa"
+theme = "hugo-theme-tokiwa"
 
 [markup.goldmark.renderer]
 unsafe= true
@@ -21,6 +21,8 @@ Tokiwa-iro is the theme color of this site.
 favicon = "img/favicon-32x32.png"
 math = true # for introducing $KaTEX$
 env = "production" # for Google Analytics and DISQUS.
+useChineseFonts = true
+bannerFont = "fonts/exampleFont"
 
 [menu]
 # Shown in the side menu.
