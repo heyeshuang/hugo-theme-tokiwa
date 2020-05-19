@@ -1,5 +1,5 @@
 name = "Tokiwa"
-license = "GPL"
+license = "MIT"
 licenselink = "https://github.com/heyeshuang/hugo-theme-tokiwa/blob/master/LICENSE.md"
 description = "A minimal blog theme inspired by the color tokiwa-iro (常磐色)."
 homepage = "https://github.com/heyeshuang/hugo-theme-tokiwa"
@@ -10,3 +10,8 @@ min_version = "0.38"
 [author]
   name = "He Yeshuang"
   homepage = "https://heysh.xyz"
+
+[original]
+    author = "Jim Frenette"
+    homepage = "https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/"
+    repo = "https://github.com/jimfrenette/hugo-starter"
