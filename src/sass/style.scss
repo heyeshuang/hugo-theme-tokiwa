@@ -173,6 +173,10 @@ a {
         margin: 0 5px
     }
 
+    img {
+        @apply shadow-lg
+    }
+
     table {
         @apply overflow-x-auto scrolling-auto;
         table-layout: auto
