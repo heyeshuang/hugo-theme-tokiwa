@@ -1,9 +1,9 @@
 baseURL = "https://example.com/"
-title = "测试文字abc"
+title = "Hugo Themes"
 author = "He Yeshuang"
 copyright = "Copyright © 2008–2019"
-languageCode = "zh-cn"
-DefaultContentLanguage = "zh-cn"
+languageCode = "en"
+DefaultContentLanguage = "cn"
 hasCJKLanguage=true
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
@@ -27,7 +27,7 @@ bannerFont = "fonts/exampleFont"
 [menu]
 # Shown in the side menu.
   [[menu.main]]
-    name = "归档"
+    name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 1
     identifier = "post"
@@ -50,26 +50,6 @@ bannerFont = "fonts/exampleFont"
     weight = 3
     identifier = "about"
     url = "/about/"
-
-  [[menu.main]]
-    name = "Theatre"
-    pre = "<i class='fa fa-video-camera fa-fw'></i>"
-    weight = 3
-    identifier = "sentences"
-    url = "/sentences/"
-
-  [[menu.main]]
-    name = "Begging"
-    pre = "<i class='fa fa-money fa-fw'></i>"
-    weight = 3
-    identifier = "begging"
-    url = "/wallet/"
-  [[menu.main]]
-    name = "Bud"
-    pre = "<i class='fa fa-pagelines fa-fw'></i>"
-    weight = 3
-    identifier = "home"
-    url = "https://heysh.xyz/"
 
 
 [taxonomies]
