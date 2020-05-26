@@ -11,6 +11,8 @@ This theme is especially optimized for Chinese characters, while works well with
 ![1](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot.png)
 ![2](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot02.png)
 
+A live demo is at <http://heysh.xyz/hugo-theme-tokiwa/>.
+
 ## Install
 
 Inside the folder of your Hugo site run:
