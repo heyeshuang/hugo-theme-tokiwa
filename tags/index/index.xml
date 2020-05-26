@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>index on 测试文字abc</title>
-    <link>https://example.com/tags/index/</link>
-    <description>Recent content in index on 测试文字abc</description>
+    <title>index on theme 常磐</title>
+    <link>http://heysh.xyz/hugo-theme-tokiwa/tags/index/</link>
+    <description>Recent content in index on theme 常磐</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2008–2019</copyright>
     
-	<atom:link href="https://example.com/tags/index/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://heysh.xyz/hugo-theme-tokiwa/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/post/</link>
+      <link>http://heysh.xyz/hugo-theme-tokiwa/post/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/</guid>
+      <guid>http://heysh.xyz/hugo-theme-tokiwa/post/</guid>
       <description></description>
     </item>
     

@@ -3,107 +3,107 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/archives/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/css/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/html/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/markdown/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/markdown-syntax/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/post/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/series/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/syntax/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/themes/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/themes/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/series/themes-guide/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/series/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/placeholder-text/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/text/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/math-typesetting/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/post/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/emoji/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/emoji-support/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/post/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/index/</loc>
+    <loc>http://heysh.xyz/hugo-theme-tokiwa/tags/index/</loc>
   </url>
   
 </urlset>
