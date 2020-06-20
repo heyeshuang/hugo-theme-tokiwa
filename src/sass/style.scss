@@ -305,6 +305,7 @@ a {
 details.toc {
     nav {
         // display: inline;
+        overflow-x: hidden;
     }
 
     nav ul {
@@ -343,6 +344,7 @@ details.toc {
         >summary {
             cursor: pointer;
             list-style: none;
+            outline: none;
         }
 
         >summary::-webkit-details-marker {
@@ -366,7 +368,7 @@ details.toc {
             @apply bg-opacity-75;
             background: theme("colors.gray.100");
             color: theme("colors.java.700");
-            font-size: 18px;
+            font-size: 16px;
             font-family: theme("fontFamily.serif");
         }
 
