@@ -28,25 +28,21 @@ bannerFont = "fonts/exampleFont"
 # Shown in the side menu.
   [[menu.main]]
     name = "Posts"
-    pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 1
     identifier = "post"
     url = "/post/"
   [[menu.main]]
     name = "Tags"
-    pre = "<i class='fa fa-tags fa-fw'></i>"
     url = "/tags/"
     weight = 2
 
   [[menu.main]]
     name = "Categories"
-    pre = "<i class='fa fa-folder fa-fw'></i>"
     url = "/categories/"  
     weight = 2
 
   [[menu.main]]
     name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
     weight = 3
     identifier = "about"
     url = "/about/"

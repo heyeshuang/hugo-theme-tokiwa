@@ -37,23 +37,24 @@ bannerFont = "fonts/exampleFont" # custom your own font for the title.
 [menu]
 # Shown in the side menu.
   [[menu.main]]
-    name = "cat"
-    pre = "<i class='fa fa-list fa-fw'></i>"
+    name = "Posts"
     weight = 1
     identifier = "post"
     url = "/post/"
   [[menu.main]]
     name = "Tags"
-    pre = "<i class='fa fa-tags fa-fw'></i>"
     url = "/tags/"
     weight = 2
 
 [social]
-twitter="http://twitter.com/hh"
-instagram="http://twitter.com/hh"
-gitlab="http://twitter.com/hh"
-youtube="http://twitter.com/hh"
-github="http://github.com/hh"
+instagram="http://example.com/"
+bilibili="http://example.com/"
+weibo="http://example.com/"
+zhihu="http://example.com/"
+twitter="http://twitter.com/"
+gitlab="http://gitlab.com/"
+youtube="http://youtube.com/"
+github="http://github.com/"
 ```
 
 A complete `config.toml` example is in the `exampleSite` folder.
