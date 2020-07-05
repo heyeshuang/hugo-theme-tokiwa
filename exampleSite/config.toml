@@ -20,6 +20,7 @@ Tokiwa-iro is the theme color of this site.
 """
 favicon = "img/favicon-32x32.png"
 math = true # for introducing $KaTEX$
+fuse = true # for searchbox. "JSON" must added to output contents. See [outputs].
 env = "production" # for Google Analytics and DISQUS.
 useChineseFonts = true
 bannerFont = "fonts/exampleFont"
@@ -63,3 +64,6 @@ mail="mailto:anon@example.com"
 youtube="http://youtube.com/"
 github="http://github.com/"
 # any icon in layouts/partials/svg can be used by the name without the "-line.svg"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

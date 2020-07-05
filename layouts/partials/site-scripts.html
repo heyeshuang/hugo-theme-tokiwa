@@ -2,3 +2,7 @@
 {{ with $script.js }}
 <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
 {{ end }}
+{{ if .Site.Params.fuse }}
+<script src="/lib/fuse.min.js"></script> <!-- download and copy over fuse.min.js file from fusejs.io -->
+<script src="/lib/fastsearch.js"></script>
+{{ end }}

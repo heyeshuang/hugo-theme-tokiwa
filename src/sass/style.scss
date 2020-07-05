@@ -296,10 +296,11 @@ a {
 // }
 @supports (-webkit-backdrop-filter:none) or (backdrop-filter:none) {
     .bg-opacity-custom {
-        -webkit-backdrop-filter: blur(3px);    
-        backdrop-filter: blur(3px);   
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
     }
 }
+
 /******************Table of Contents' Style***********************/
 
 details.toc {
@@ -318,62 +319,62 @@ details.toc {
             list-style-position: inside;
             margin-right: 1em;
         }
-        }
+    }
 
-        nav ul>li {
-            @apply font-light;
+    nav ul>li {
+        @apply font-light;
 
+        @apply text-java-700;
+
+        a {
             @apply text-java-700;
-
-            a {
-                @apply text-java-700;
-            }
         }
+    }
 
-        nav ul ul>li {
-            @apply leading-normal;
-            @apply text-sm;
+    nav ul ul>li {
+        @apply leading-normal;
+        @apply text-sm;
 
+        @apply text-java-600;
+
+        a {
             @apply text-java-600;
-
-            a {
-                @apply text-java-600;
-            }
         }
+    }
 
-        >summary {
-            cursor: pointer;
-            list-style: none;
-            outline: none;
-        }
+    >summary {
+        cursor: pointer;
+        list-style: none;
+        outline: none;
+    }
 
-        >summary::-webkit-details-marker {
-            display: none;
-        }
+    >summary::-webkit-details-marker {
+        display: none;
+    }
 
-        hr {
-            border-top: 1px dotted theme("colors.java.400");
-            border-bottom: 1px dotted #fff;
-            margin-top: 0.8em;
-            margin-bottom: 0.4em;
-            text-align: center;
-        }
+    hr {
+        border-top: 1px dotted theme("colors.java.400");
+        border-bottom: 1px dotted #fff;
+        margin-top: 0.8em;
+        margin-bottom: 0.4em;
+        text-align: center;
+    }
 
-        hr:after {
-            content: 'Table of Contents';
-            display: inline-block;
-            position: relative;
-            top: -19px;
-            padding: 0 5px;
-            @apply bg-opacity-75;
-            background: theme("colors.gray.100");
-            color: theme("colors.java.700");
-            font-size: 16px;
-            font-family: theme("fontFamily.serif");
-        }
+    hr:after {
+        content: 'Table of Contents';
+        display: inline-block;
+        position: relative;
+        top: -19px;
+        padding: 0 5px;
+        @apply bg-opacity-75;
+        background: theme("colors.gray.100");
+        color: theme("colors.java.700");
+        font-size: 16px;
+        font-family: theme("fontFamily.serif");
+    }
 
-        }
+}
 
-        /*! purgecss end ignore */
+/*! purgecss end ignore */
 
-        @import "tailwindcss/utilities";
+@import "tailwindcss/utilities";

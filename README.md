@@ -95,6 +95,7 @@ npm run build
 * Fonts. `杨任东竹石体` was used for the banner in the beginning. This font is okay for commercial usage. However, I wonder if it is compatible with ~~GPL~~ MIT, so I replaced it with an `exampleFont` in the `exampleSite`. See `config.toml`.
 * And the open, warm-hearted [Noto Serif CN](https://www.google.com/get/noto/help/cjk/). Always a good choice for Chinese words. Under [OFL 1.1](https://github.com/googlefonts/noto-cjk/blob/master/LICENSE). 
 * Beautiful icons made by [Remix-Design](https://github.com/Remix-Design/remixicon). Under [Apache 2.0](https://raw.githubusercontent.com/Remix-Design/RemixIcon/master/License).
+* [fuse.js](https://fusejs.io/) for fuzzy search, and a [blog post](https://ttys3.net/post/hugo/hugo-fast-search/) (in Chinese) about how to use it. 
 
 Thanks.
 
