@@ -163,7 +163,7 @@ a {
     }
 
     table {
-        @apply overflow-x-auto scrolling-auto;
+        @apply overflow-x-auto;
         table-layout: auto
     }
 
@@ -231,13 +231,13 @@ a {
     }
 
     pre {
-        @apply scrolling-auto overflow-x-auto border border-solid rounded-br-lg border-java-500 bg-java-100;
+        @apply overflow-x-auto border border-solid rounded-br-lg border-java-500 bg-java-100;
         padding: 1em 1.5em;
         display: block;
     }
 
     .highlight {
-        @apply scrolling-auto overflow-x-auto
+        @apply overflow-x-auto
     }
 
     blockquote {

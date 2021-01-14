@@ -1,4 +1,5 @@
 module.exports = {
+  purge: false, //in postcss.config.js
   theme: {
     textIndent: { // defaults to {}
       '1': '1rem',
@@ -34,7 +35,7 @@ module.exports = {
       },
       maxWidth: {
         'xxs': '15em',
-        'xxxs':'5rem'
+        'xxxs': '5rem'
       },
       colors: { // color scheme:
         // https://javisperez.github.io/tailwindcolorshades/#/?blue-stone=085f63&java=49beb7&golden-tainoi=facf5a&eucalyptus=028760&Medium%20Red%20Violet=c64191&tv=1
@@ -83,16 +84,31 @@ module.exports = {
           800: '#591D41',
           900: '#3B142C',
         },
+        gray: {  //from tailwindCSS v1.x
+          100: '#f7fafc',
+          200: '#edf2f7',
+          300: '#e2e8f0',
+          400: '#cbd5e0',
+          500: '#a0aec0',
+          600: '#718096',
+          700: '#4a5568',
+          800: '#2d3748',
+          900: '#1a202c',
+        },
       },
     },
   },
   variants: {},
-  plugins: [require('tailwindcss-typography')({
-    // all these options default to the values specified here
-    ellipsis: true,         // whether to generate ellipsis utilities
-    hyphens: true,          // whether to generate hyphenation utilities
-    kerning: true,          // whether to generate kerning utilities
-    textUnset: true,        // whether to generate utilities to unset text properties
-    componentPrefix: 'c-',  // the prefix to use for text style classes
-  }),],
+  // plugins: [
+  //   require('@tailwindcss/typography'),
+  //   // ...
+  // ],
+  // plugins: [require('tailwindcss-typography')({
+  //   // all these options default to the values specified here
+  //   ellipsis: true,         // whether to generate ellipsis utilities
+  //   hyphens: true,          // whether to generate hyphenation utilities
+  //   kerning: true,          // whether to generate kerning utilities
+  //   textUnset: true,        // whether to generate utilities to unset text properties
+  //   componentPrefix: 'c-',  // the prefix to use for text style classes
+  // }),],
 }
