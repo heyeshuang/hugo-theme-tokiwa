@@ -43,6 +43,7 @@ h6 {
 }
 
 hr {
+    overflow: visible;
     border: none;
     border-bottom: 1px solid theme("colors.eucalyptus.300");
     margin-bottom: 0.8em;
