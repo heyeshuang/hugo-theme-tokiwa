@@ -33,6 +33,7 @@ math = true # for introducing $KaTEX$
 env = "production" # for Google Analytics and DISQUS.
 useChineseFonts = true # for font Noto Serif etc.
 bannerFont = "fonts/exampleFont" # custom your own font for the title.
+postDateFormat = "2006-1-2" # override custom date format posts.
 
 [menu]
 # Shown in the side menu.
