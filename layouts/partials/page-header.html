@@ -13,7 +13,7 @@
 	{{- partial "tags.html" . -}}
 	<time class="text-eucalyptus-500 md:text-right md:flex-grow font-light pl-4"
 		datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-		{{- .Date.Format "2006-1-2 15:04" -}}
+		{{- .Date.Format (.Site.Params.PostDateFormat | default "2006-1-2 15:04") -}}
 	</time>
 </div>
 {{ partial "toc.html" . }}
