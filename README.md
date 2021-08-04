@@ -23,7 +23,7 @@ $ git submodule add https://github.com/heyeshuang/hugo-theme-tokiwa.git themes/h
 
 ```toml
 disqusShortname = "YOURSHORTNAME"
-googleAnalytics = "UA-1234567890"
+googleAnalytics = "UA-1234567890" # or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
 
 [params]
 description = """

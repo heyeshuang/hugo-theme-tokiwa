@@ -33,7 +33,7 @@
 	<link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ site.Title }}">
 	{{end}}
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-	{{ template "_internal/google_analytics_async.html" . }}
+	{{ template "_internal/google_analytics.html" . }}
 	{{ end }}
 	{{ if or .Params.math .Site.Params.math }}
 	{{ partial "math.html" . }}
