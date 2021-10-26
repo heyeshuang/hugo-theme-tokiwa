@@ -7,7 +7,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = "UA-FAKE" ## or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
 hasCJKLanguage = true
-languageCode = "en"
+languageCode = "cn"
 theme = "hugo-theme-tokiwa"
 title = "Hugo Themes"
 

@@ -57,6 +57,7 @@
 			pangu.spacingPage();
 		});
 	</script>
+	{{end}}
 	<!-- @font-face for Chinese -->
 	{{ if .Site.Params.useChineseFonts}}
 	<style type="text/css" media="screen, print">
@@ -67,7 +68,15 @@
 			src: url('{{ ( printf "%s%s" .Site.Params.bannerFont ".woff2") | absURL }}') format('woff2'),
 				url('{{ ( printf "%s%s" .Site.Params.bannerFont ".woff") | absURL }}') format('woff');
 		}
-
+		/*  For varible font usage sometimes */
+		/*
+		@font-face {
+			font-family: 'Source Han Serif CN Variable';
+			src: url('{{"fonts/SourceHanSerifCN-VF.otf.woff2" | absURL }}') format('woff2');
+			font-weight: 1 999;
+			font-style: normal;
+			font-display: swap;
+		} */
 		/* noto-serif-sc-300 - latin_chinese-simplified */
 		@font-face {
 			font-family: 'Noto Serif CJK SC';
@@ -107,7 +116,6 @@
 			/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		}
 	</style>
-	{{end}}
 	{{ end }}
 </head>
 
