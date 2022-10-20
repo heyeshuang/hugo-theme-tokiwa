@@ -32,7 +32,7 @@
     "postcss-loader": "^4.1.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^2.0.0",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.2.19",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.14.0",
     "webpack-merge": "^5.7.3",
