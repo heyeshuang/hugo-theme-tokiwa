@@ -11,14 +11,32 @@ This theme is especially optimized for Chinese characters, while works well with
 ![1](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot.png)
 ![2](https://raw.githubusercontent.com/heyeshuang/hugo-theme-tokiwa/master/images/screenshot02.png)
 
-A live demo is at <http://heysh.xyz/hugo-theme-tokiwa/>.
+A live demo is at <https://heysh.xyz/hugo-theme-tokiwa/>.
 
 ## Install
+
+### Git submodule
 
 Inside the folder of your Hugo site run:
 ```bash
 $ git submodule add https://github.com/heyeshuang/hugo-theme-tokiwa.git themes/hugo-theme-tokiwa
 ```
+
+### Hugo module
+
+Inside the folder of your Hugo site run:
+```bash
+$ hugo mod init https://github.com/<YOUR_NAME>/<THEME_NAME>
+$ hugo mod get https://github.com/heyeshuang/hugo-theme-tokiwa
+```
+
+Then add to your `hugo.toml`:
+```toml
+[module]
+[[module.imports]]
+  path = "github.com/heyeshuang/hugo-theme-tokiwa"
+```
+
 ## available config params
 
 ```toml
