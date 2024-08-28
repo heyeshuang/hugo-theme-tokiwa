@@ -57,7 +57,7 @@ weight = 3
 category = "categories"
 series = "series"
 tag = "tags"
-[social]
+[params.social]
 bilibili = "http://example.com/"
 github = "https://github.com/"
 gitlab = "https://gitlab.com/"
