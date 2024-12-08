@@ -1,4 +1,4 @@
-
+{{ with .Site.Params.Social }}
 {{ $count := len .Site.Params.Social}}
 <div class="flex flex-wrap-reverse md:justify-end content-end md:content-start justify-start items-start {{if gt $count 4}}md:flex-col{{end}}  max-h-16">
 	{{ range $key,$value:=.Site.Params.Social }}
@@ -14,3 +14,4 @@
 	{{ end }}
 	{{ end }}
 </div>
+{{ end }}
