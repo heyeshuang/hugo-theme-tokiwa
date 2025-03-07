@@ -1,7 +1,7 @@
 {{ with .Site.Params.Social }}
-{{ $count := len .Site.Params.Social}}
+{{ $count := len .}}
 <div class="flex flex-wrap-reverse md:justify-end content-end md:content-start justify-start items-start {{if gt $count 4}}md:flex-col{{end}}  max-h-16">
-	{{ range $key,$value:=.Site.Params.Social }}
+	{{ range $key,$value:=. }}
 	{{ if not (eq $key "_merge") }}
 	<a href='{{$value}}' target="_blank" class="{{- $key}} icon pl-1 text-eucalyptus-400 hover:text-java-400" title="{{- $key}} link" rel="noopener"
 		aria-label="follow on {{$key}}——Opens in a new window">
